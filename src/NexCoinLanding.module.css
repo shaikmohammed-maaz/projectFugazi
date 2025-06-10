@@ -1,0 +1,329 @@
+/* NexCoinLanding.module.css - Styling for NexCoin landing page */
+
+.root {
+  min-height: 100vh;
+  background: #0a2a5c;
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem 1.5rem 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 0.7rem;
+}
+
+.logoIcon {
+  background: #ffd43b;
+  color: #0a2a5c;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #ffd43b;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 3rem;
+  margin-top: 2.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+
+.heroText {
+  max-width: 38rem;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroTextFadeIn 1s 0.2s forwards;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.2rem;
+  color: #c7d6f3;
+}
+
+.getStartedBtn {
+  background: #ffd43b;
+  color: #0a2a5c;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 12px 0 #ffd43b33;
+  animation: btnPopIn 1.2s cubic-bezier(.68,-0.55,.27,1.55) 0.8s backwards;
+}
+
+@keyframes btnPopIn {
+  0% { opacity: 0; transform: scale(0.7); }
+  80% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.getStartedBtn:hover {
+  background: #ffe066;
+  box-shadow: 0 4px 24px 0 #ffd43b55;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.heroImage {
+  position: relative;
+  min-width: 340px;
+  min-height: 340px;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heroImg {
+  width: 320px;
+  height: auto;
+  border-radius: 2.5rem;
+  object-fit: cover;
+  z-index: 1;
+  position: relative;
+  animation: heroImgFadeIn 1.2s 0.3s both;
+  box-shadow: none;
+}
+
+@keyframes heroImgFadeIn {
+  0% { opacity: 0; transform: scale(0.92) translateY(30px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.coin {
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  width: 180px;
+  height: 180px;
+  background: #ffd43b;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px 0 #0003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #0a2a5c;
+  border: 8px solid #ffe066;
+  z-index: 2;
+  animation: coinBounce 2.2s cubic-bezier(.68,-0.55,.27,1.55) infinite;
+}
+
+@keyframes coinBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.coinOrbit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 320px;
+  border: 2px solid #ffd43b44;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: orbitSpin 8s linear infinite;
+}
+
+@keyframes orbitSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.features {
+  display: flex;
+  gap: 2.5rem;
+  margin: 5rem 0 0 0;
+  width: 100%;
+  justify-content: center;
+  background: #0a2a5c; /* Ensure features section matches main background */
+  padding: 3rem 0 3rem 0;
+}
+
+.featureCard {
+  background: #153a6b;
+  border-radius: 1.2rem;
+  padding: 2.2rem 1.7rem 2.2rem 1.7rem;
+  flex: 1 1 0;
+  min-width: 260px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 24px 0 #0002;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: featureFadeIn 0.8s forwards;
+}
+
+.featureCard:nth-child(1) { animation-delay: 0.2s; }
+.featureCard:nth-child(2) { animation-delay: 0.4s; }
+.featureCard:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes featureFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.featureIcon {
+  background: #ffd43b;
+  color: #0a2a5c;
+  border-radius: 1rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.featureDesc {
+  color: #c7d6f3;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2.5rem 0 1.2rem 0;
+  background: #071e3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.socials {
+  display: flex;
+  gap: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.socialIcon {
+  color: #ffd43b;
+  font-size: 1.7rem;
+  transition: color 0.2s, transform 0.2s;
+  will-change: transform;
+}
+
+.socialIcon:hover {
+  color: #fff;
+  transform: scale(1.18) rotate(-8deg);
+}
+
+.copyright {
+  color: #c7d6f3;
+  font-size: 1.05rem;
+}
+
+@keyframes heroTextFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    padding: 0 1.2rem;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+  }
+  .heroImage {
+    min-width: 220px;
+    min-height: 220px;
+    width: 240px;
+    height: 240px;
+  }
+  .heroImg {
+    width: 200px;
+    border-radius: 1.2rem;
+    box-shadow: none;
+  }
+  .coin {
+    left: 30px;
+    top: 30px;
+    width: 100px;
+    height: 100px;
+    font-size: 2.2rem;
+    border-width: 4px;
+  }
+  .coinOrbit {
+    width: 180px;
+    height: 180px;
+  }
+}

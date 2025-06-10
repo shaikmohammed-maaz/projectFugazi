@@ -1,0 +1,57 @@
+/* Navbar.module.css - Consistent navigation bar styling for NexCoin */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem 1.5rem 3rem;
+  background: transparent;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 0.7rem;
+}
+
+.logoIcon {
+  background: #ffd43b;
+  color: #0a2a5c;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 12px 0 #ffd43b33;
+}
+
+.nav {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.navLink:hover {
+  color: #ffd43b;
+  border-bottom: 2px solid #ffd43b;
+}
+
+.active {
+  color: #ffd43b;
+  border-bottom: 2px solid #ffd43b;
+}
