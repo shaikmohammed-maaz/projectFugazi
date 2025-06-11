@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styles from './Navbar.module.css';
 
 const navLinks = [
-  { label: 'Home', to: '/' },
+  { label: 'Home', to: '/projectFugazi' },
   { label: 'About', to: '/about' },
   { label: 'FAQ', to: '/faq' },
   { label: 'Download', to: '/download' },
