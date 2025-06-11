@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<NexCoinLanding />} />
+        <Route path="/projectFugazi" element={<NexCoinLanding />} />
         <Route path="/about" element={<AboutNexCoin />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/download" element={<Download />} />

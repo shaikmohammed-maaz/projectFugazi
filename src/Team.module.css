@@ -84,6 +84,8 @@
   margin: 0;
 }
 
+/* ...existing code... */
+
 @media (max-width: 900px) {
   .cardsGrid {
     grid-template-columns: 1fr;
@@ -96,5 +98,54 @@
   }
   .visionBox {
     max-width: 95vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerSection {
+    padding-top: 48px;
+    padding-bottom: 18px;
+  }
+  .title {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  .cardsGrid {
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .memberCard {
+    padding: 18px 8px 16px 8px;
+    border-width: 2px;
+    min-height: 180px;
+    border-radius: 8px;
+  }
+  .avatar svg {
+    width: 60px;
+    height: 60px;
+  }
+  .memberName {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+  .memberRole {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .memberDesc {
+    font-size: 0.98rem;
+    line-height: 1.4;
+  }
+  .visionBox {
+    padding: 18px 8px 14px 8px;
+    border-radius: 8px;
+    margin-top: 18px;
+  }
+  .visionBox h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .visionBox p {
+    font-size: 1rem;
   }
 }

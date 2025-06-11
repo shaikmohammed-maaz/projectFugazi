@@ -1,57 +1,125 @@
-/* Navbar.module.css - Consistent navigation bar styling for NexCoin */
-
 .header {
+  background: #05235a;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 3rem 1.5rem 3rem;
-  background: transparent;
-  z-index: 10;
+  height: 72px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
   gap: 0.7rem;
+  padding-left: 4%;
 }
 
 .logoIcon {
-  background: #ffd43b;
-  color: #0a2a5c;
+  background: #ffd12a;
+  color: #05235a;
   border-radius: 50%;
   width: 2.2rem;
   height: 2.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.3rem;
-  box-shadow: 0 2px 12px 0 #ffd43b33;
+  font-size: 1.4rem;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.menuIcon {
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 .nav {
   display: flex;
-  gap: 2.2rem;
+  gap: 2.5rem;
+  align-items: center;
 }
 
 .navLink {
   color: #fff;
   text-decoration: none;
-  font-size: 1.08rem;
+  padding: 0.5rem 0.7rem;
   font-weight: 500;
-  transition: color 0.2s, border-bottom 0.2s;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
+  font-size: 1.08rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
 }
 
-.navLink:hover {
-  color: #ffd43b;
-  border-bottom: 2px solid #ffd43b;
-}
-
+.navLink:hover,
 .active {
-  color: #ffd43b;
-  border-bottom: 2px solid #ffd43b;
+  color: #ffd12a;
+  background: rgba(255, 209, 42, 0.08);
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0;
+  }
+  .nav {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    height: 60px;
+    padding: 0;
+  }
+  .menuBtn {
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #05235a;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .navLink {
+    width: 100%;
+    padding: 0.9rem 0.2rem;
+    border-bottom: 1px solid #1a3977;
+    font-size: 1.08rem;
+    border-radius: 0;
+  }
+  .navLink:last-child {
+    border-bottom: none;
+  }
 }

@@ -327,3 +327,159 @@
     height: 180px;
   }
 }
+
+/* ...existing code... */
+
+@media (max-width: 900px) {
+  .main {
+    padding: 0 1.2rem;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    width: 100%;
+  }
+  .heroText {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .heroImage {
+    min-width: 180px;
+    min-height: 180px;
+    width: 220px;
+    height: 220px;
+  }
+  .heroImg {
+    width: 180px;
+    border-radius: 1.2rem;
+    box-shadow: none;
+  }
+  .coin {
+    left: 20px;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border-width: 3px;
+  }
+  .coinOrbit {
+    width: 120px;
+    height: 120px;
+  }
+  .features {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0 2rem 0;
+    margin: 2.5rem 0 0 0;
+    align-items: center;
+  }
+  .featureCard {
+    max-width: 95vw;
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    gap: 0.7rem;
+  }
+  .logo {
+    font-size: 1.1rem;
+    gap: 0.4rem;
+  }
+  .logoIcon {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1rem;
+  }
+  .main {
+    padding: 0 0.5rem;
+    margin-top: 1.2rem;
+  }
+  .heroTitle {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+  }
+  .heroSubtitle {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+  }
+  .getStartedBtn {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .heroImage {
+    min-width: 120px;
+    min-height: 120px;
+    width: 140px;
+    height: 140px;
+  }
+  .heroImg {
+    width: 110px;
+    border-radius: 0.7rem;
+  }
+  .features {
+    padding: 1.2rem 0 1.2rem 0;
+    gap: 1rem;
+    margin: 1.5rem 0 0 0;
+  }
+  .featureCard {
+    padding: 1rem 0.5rem;
+    border-radius: 0.7rem;
+  }
+  .featureIcon {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    border-radius: 0.5rem;
+  }
+  .featureTitle {
+    font-size: 1.08rem;
+    margin-bottom: 0.4rem;
+  }
+  .featureDesc {
+    font-size: 0.98rem;
+  }
+  .footer {
+    padding: 1.2rem 0 0.7rem 0;
+    gap: 0.7rem;
+  }
+  .socials {
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .copyright {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroImage,
+  .heroImg {
+    display: none !important;
+  }
+}
+
+/* Optional: Make sure images and cards never overflow */
+@media (max-width: 400px) {
+  .heroImg,
+  .heroImage {
+    width: 90vw;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .featureCard {
+    max-width: 98vw;
+    padding: 0.7rem 0.2rem;
+  }
+}

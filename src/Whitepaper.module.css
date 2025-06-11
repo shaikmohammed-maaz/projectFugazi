@@ -114,3 +114,139 @@
     padding-left: 24px;
   }
 }
+/* ...existing code... */
+
+@media (max-width: 900px) {
+  .contentSection {
+    flex-direction: column;
+    gap: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .headerSection {
+    padding-left: 16px;
+    margin-top: 48px;
+  }
+  .keyPointsCard {
+    max-width: 100%;
+    min-width: 0;
+    padding: 28px 18px;
+  }
+  .illustration {
+    margin-left: 0;
+    margin-top: 12px;
+    min-width: 120px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .whitepaperPage {
+    min-height: 100vh;
+  }
+  .headerSection {
+    padding-left: 6px;
+    margin-top: 24px;
+    text-align: center;
+  }
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+  .downloadBtn {
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 7px;
+    margin-top: 6px;
+  }
+  .contentSection {
+    gap: 12px;
+    margin: 18px 0 0 0;
+    padding: 0 2vw;
+  }
+  .keyPointsCard {
+    padding: 14px 6px;
+    border-radius: 8px;
+    font-size: 1rem;
+    max-width: 100vw;
+    min-width: 0;
+  }
+  .keyPointsCard h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  .keyPointsCard ul {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    padding-left: 14px;
+  }
+  .illustration {
+    margin: 0 auto;
+    min-width: 80px;
+    max-width: 90vw;
+    justify-content: center;
+  }
+  .footer {
+    margin-top: 24px;
+    padding: 18px 0 8px 0;
+  }
+  .socialIcons {
+    gap: 18px;
+    margin-bottom: 8px;
+  }
+  .iconLink {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+  }
+  .copyright {
+    font-size: 0.95rem;
+    margin-top: 2px;
+  }
+} 
+
+.illustrationImg {
+  width: 100%;
+  max-width: 5000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .illustrationImg {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .illustrationImg {
+    max-width: 90vw;
+    min-width: 0;
+  }
+}    
+
+
+.keyPointsCard ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.keyPointsCard li {
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.keyPointsCard li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: #ffd12a;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1;
+}
